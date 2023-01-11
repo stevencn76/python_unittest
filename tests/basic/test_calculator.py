@@ -13,3 +13,14 @@ class TestCalculator(unittest.TestCase):
 
         # Assert
         self.assertEqual(expected_result, actual_result)
+
+    def test_add_for_two(self):
+        # Setup
+        cal = Calculator()
+        expected_result = 13
+
+        # Action
+        actual_result = cal.add(1, 2, 5)
+
+        # Assert
+        self.assertEqual(expected_result, actual_result)
