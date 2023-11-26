@@ -1,4 +1,7 @@
 import unittest
+
+from parameterized import parameterized
+
 from myprj.basic.calculator import Calculator
 
 
@@ -24,3 +27,14 @@ class TestCalculator(unittest.TestCase):
 
         # Assert
         self.assertEqual(expected_result, actual_result)
+
+    @parameterized.expand([[1, True], [2, False]])
+    def test_is_odd(self, num, expected_out):
+        # Setup
+        cal = Calculator()
+
+        # Action
+        actual_result = cal.is_odd(num)
+
+        # Assert
+        assert actual_result == expected_out

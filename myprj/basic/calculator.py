@@ -8,3 +8,6 @@ class Calculator:
                 result += 5
 
         return result
+
+    def is_odd(self, num: int) -> bool:
+        return num % 2 != 0
